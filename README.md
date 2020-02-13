@@ -2,10 +2,15 @@
 Calculator
 
 public class Main implements ICalculator {
-
+    public static final  int max=Integer.MAX_VALUE;
+    public static final  int min=Integer.MIN_VALUE;
     @Override
     public int add(int x, int y) {
+        long sum=(long)x+y;
+        if(sum<=max&&sum>=min)
         return x + y;
+        System.out.println("The sum is not an int");
+        return -1;
     }
 
     @Override
